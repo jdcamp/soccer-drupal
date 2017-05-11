@@ -1,0 +1,75 @@
+<?php
+
+/**
+ *
+ */
+class newsletter extends DrupalUnitTestCase
+{
+  public static function getInfo() {
+    return array(
+      'name' => 'newsletter form validation',
+      'description' => 'testing email validation',
+      'group' => 'Examples',
+    );
+  }
+
+
+  public function testNewsletterEmailValidation() {
+    // Null values
+    $result = valid_email(NULL);
+    $message = 'a NULL value should return false';
+    $this->assertFalse($result, $message);
+
+    $result = valid_email('');
+    $message = 'a NULL value should return false';
+    $this->assertFalse($result, $message);
+
+    $result = valid_email(0);
+    $message = 'a NULL value should return false';
+    $this->assertFalse($result, $message);
+
+    //string
+    $result = valid_email('something');
+    $message = 'a nonvalid email should return false';
+    $this->assertFalse($result, $message);
+
+    $result = valid_email('something@thing.com');
+    $message = 'a valid email should return true';
+    $this->assertTrue($result, $message);
+  }
+
+  public function testNewsletterNameValidation() {
+    //null value testing
+    $result = valid_name(NULL);
+    $message = 'a NULL value should return false';
+    $this->assertFalse($result, $message);
+
+    $result = valid_name('');
+    $message = 'an empty value should return false';
+    $this->assertFalse($result, $message);
+    //special characters and numbers
+    $result = valid_name(0);
+    $message = 'an number value should return false';
+    $this->assertFalse($result, $message);
+
+    $result = valid_name('@person');
+    $message = 'a special character in string should return false';
+    $this->assertFalse($result, $message);
+
+    //valid strings
+    $result = valid_name('something');
+    $message = 'a valid name should return true';
+    $this->assertTrue($result, $message);
+
+    $result = valid_name('a');
+    $message = 'a single character should return true';
+    $this->assertTrue($result, $message);
+
+    $result = valid_name('a person');
+    $message = 'a mulity word string should return true';
+    $this->assertTrue($result, $message);
+  }
+
+
+
+}

@@ -1,0 +1,64 @@
+<?php
+
+function newsletter_menu(){
+
+    $items['newsletter_form'] = array(
+        'title' => 'Newsleter subscription',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('subscription'),
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+    );
+
+
+    $items['newsletter_success_page'] = array(
+        'title' => 'Success',
+        'page callback' => 'newsletter_success',
+        'access callback' => TRUE,
+        'type' => MENU_CALLBACK,
+    );
+  return $items;
+}
+
+function subscription() {
+  $form['name'] = array(
+    '#title' => 'Name',
+    '#type' => 'textfield',
+    '#description' => t('Please introduce your name'),
+  );
+
+  $form['email'] = array(
+    '#title' => 'Email',
+    '#type' => 'textfield',
+    '#description' => t('Please introduce your email'),
+  );
+
+  $form['submit'] = array(
+       '#type' => 'submit',
+       '#value' => 'Submit',
+   );
+
+  return $form;
+}
+
+function subscription_submit($form, &$form_state) {
+  $form_state['redirect'] = 'newsletter_success_page';
+}
+
+function newsletter_success() {
+  return 'Thank you for subribing to our newsletter';
+}
+function valid_email($email) {
+  if (!(filter_var($email, FILTER_VALIDATE_EMAIL))) {
+    return false;
+  } else{
+    return true;
+  }
+}
+function valid_name($name) {
+  if (!preg_match("/^[a-zA-Z ]+$/",$name)) {
+    return false;
+  } else{
+    return true;
+  }
+}
