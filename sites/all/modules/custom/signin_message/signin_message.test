@@ -1,0 +1,25 @@
+<?php
+/**
+ *
+ */
+class SignInTest extends DrupalWebTestCase {
+    /**
+    * Create meta data
+    */
+    public static function getInfo() {
+        return array(
+            'name' => 'sign in module tests',
+            'description' => 'Tests the signin message',
+            'group' => 'signin tests',
+        );
+    }
+    public function setUp() {
+      parent::setUp(array('signin_message'));
+    }
+
+    public function testSignInMessage() {
+      $user = $this->drupalCreateUser(array());
+      $this->drupalLogin($user);
+      $this->assertText('Hello my dear player', 'message appears');
+    }
+}

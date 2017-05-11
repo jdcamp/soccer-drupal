@@ -1,0 +1,7 @@
+name = User login Message
+description = A message to display to a user when they login
+package = custom modules
+core = 7.x
+files[] = signin_message.module
+files[] = signin_message.test
+dependencies[] = simpletest
