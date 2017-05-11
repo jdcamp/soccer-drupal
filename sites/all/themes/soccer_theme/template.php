@@ -123,8 +123,7 @@ function soccer_theme_preprocess_node(&$variables, $hook) {
 }
 // */
 function soccer_theme_preprocess_node(&$variables, $hook) {
-    dpm($variables);
-    $variables['classes_array'][] = 'test';
+
 }
 /**
  * Override or insert variables into the comment templates.
