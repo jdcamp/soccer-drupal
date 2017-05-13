@@ -1,4 +1,55 @@
+# Soccer pitch
 
+## Description
+A simple website built to practice ajax calls, and function and unit testing
+
+## Prerequisites
+You will need the following things properly installed on your computer.
+
+* [Git](https://git-scm.com/)
+* [MAMP](https://www.mamp.info/en/)
+
+## Installation
+* `git clone this repository`
+* `launch MAMP program`
+* `set the Apache Port to 8888 (MAMP)`
+* `set the MySQL Port to 8889 (MAMP)`
+* `set cloned repo folder as your Document Root (MAMP)`
+* `open the phpMyAdmin and import the database backup file (<root>/sites/all/db-backup)`
+* `go to privilege and create user (see Sample Database section)`
+* `after imported successfully, go to localhost:8888`
+* `Create a user for the database: username = "soccer", password = "soccer"`
+* `Point browser to localhost`
+* `Site maintenance account info: username = "soccer", password = "soccer"`
+_setup is for MacOS please use corresponding AMP stack with your OS_
+
+
+## Technologies Used
+  * Drupal core 7.5.4
+  * PHP
+
+## License
+
+  _MIT LICENSE_
+  _Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:_
+
+  _The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software._
+
+  _THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+
+
+
+# Drupal Default README
 CONTENTS OF THIS FILE
 ---------------------
 
