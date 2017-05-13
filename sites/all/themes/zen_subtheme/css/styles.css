@@ -1820,4 +1820,35 @@ tr.drag-previous {
   background-position: -11px center;
 }
 
+.main-menu {
+  display: table;
+}
+
+.main-menu ul {
+  display: table-row;
+}
+
+.main-menu li {
+  display: table-cell;
+}
+
+.main-menu li:nth-child(2n+0) {
+  background-color: white;
+  color: black;
+}
+
+.main-menu li:nth-child(2n+1) {
+  background-color: black;
+  color: white;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: green;
+}
+
+body .header__logo-image {
+  height: 100px;
+}
+
 /*# sourceMappingURL=styles.css.map */

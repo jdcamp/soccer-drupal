@@ -98,3 +98,10 @@
 @import 'forms/progress-throbber/progress-throbber';
 @import 'forms/resizable-textarea/resizable-textarea';
 @import 'forms/table-drag/table-drag';
+
+///////////////////////////////////////////////////////////////////
+//  Custom sass
+//   file root = custom/{partial file name}
+///////////////////////////////////////////////////////////////////
+@import 'custom/navigation';
+@import 'custom/body';

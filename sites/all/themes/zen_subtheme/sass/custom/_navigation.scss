@@ -1,0 +1,17 @@
+.main-menu {
+  display: table;
+  ul {
+    display: table-row;
+  }
+  li {
+    display: table-cell;
+  }
+  li:nth-child(2n+0) {
+    background-color: white;
+    color: black;
+  }
+  li:nth-child(2n+1) {
+    background-color: black;
+    color: white;
+  }
+}
